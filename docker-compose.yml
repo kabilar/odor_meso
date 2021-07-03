@@ -1,12 +1,13 @@
 version: '2.0'
 
 services:
-  notebook:
+  reimer:
+    image: at-docker:5000/odormeso_reimer:version2
     build:
       context: ../
       dockerfile: ./odor_meso/Dockerfile
     ports:
-      - "8888:8888"
+      - "8080:8888"
     volumes:
       - .:/data/odor_meso/
       - ../DataPlot:/data/DataPlot/
